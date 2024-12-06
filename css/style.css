@@ -1,0 +1,319 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-grey: #2c2c2c;
+    --secondary-grey: #3a3a3a;
+    --accent-green: #00ff9d;
+    --text-light: #ffffff;
+    --text-dark: #1a1a1a;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary-grey);
+    color: var(--text-light);
+}
+
+/* Header styles */
+header {
+    background-color: var(--secondary-grey);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-grey);
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--accent-green);
+    color: var(--text-dark);
+}
+
+.buy-now-btn {
+    background-color: var(--accent-green);
+    color: var(--text-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.buy-now-btn:hover {
+    background-color: #00cc7d;
+    transform: translateY(-2px);
+}
+
+/* Main content */
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 80px auto 0;
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-green);
+}
+
+#hero .subtitle {
+    color: var(--accent-green);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Articles section */
+#articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.post {
+    background-color: var(--secondary-grey);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-green);
+}
+
+.date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--accent-green);
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-grey);
+    margin-top: 4rem;
+}
+
+/* Add your custom styles here */
+
+/* Article page specific styles */
+.article-page {
+    padding-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+}
+
+.article-page h1 {
+    color: var(--accent-green);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-page .date {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content h2 {
+    color: var(--accent-green);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.article-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Make logo link color inherit */
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Guide overlay styles */
+.guide-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.guide-step {
+    background: var(--secondary-grey);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.guide-step.active {
+    display: block;
+}
+
+.guide-icon {
+    font-size: 3rem;
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+}
+
+.guide-step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-green);
+}
+
+.guide-step p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.next-step, .finish-guide {
+    background: var(--accent-green);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.next-step:hover, .finish-guide:hover {
+    background: #00cc7d;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update other text elements for the new font */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+.post h2 {
+    font-weight: 600;
+}
+
+.buy-now-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+} 

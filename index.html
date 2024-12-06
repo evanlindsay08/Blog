@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump.fun Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="guide-overlay">
+        <div class="guide-step" id="step1">
+            <i class="fas fa-book-open guide-icon"></i>
+            <h3>Welcome to Pump.fun Blog</h3>
+            <p>Your daily source for Solana trading insights</p>
+            <button class="next-step">Next</button>
+        </div>
+        <div class="guide-step" id="step2">
+            <i class="fas fa-newspaper guide-icon"></i>
+            <h3>Latest Updates</h3>
+            <p>Stay informed with our curated articles</p>
+            <button class="next-step">Next</button>
+        </div>
+        <div class="guide-step" id="step3">
+            <i class="fas fa-users guide-icon"></i>
+            <h3>Join Our Community</h3>
+            <p>Connect with us on Twitter and Telegram</p>
+            <button class="next-step">Next</button>
+        </div>
+        <div class="guide-step" id="step4">
+            <i class="fas fa-rocket guide-icon"></i>
+            <h3>Start Trading</h3>
+            <p>Ready to join? Click the Buy Now button</p>
+            <button class="finish-guide">Get Started</button>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-book-reader logo-icon"></i>
+                Pump.fun Blog
+            </div>
+            <div class="social-buttons">
+                <a href="https://twitter.com/pumpfun" class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://t.me/pumpfun" class="social-btn telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Your Source for Pump.fun Updates</h1>
+            <p>Latest news, insights, and analysis about the Solana-based trading platform</p>
+            <p class="subtitle">Your daily pump.fun news in a 2 minute read</p>
+        </section>
+
+        <section id="articles">
+            <article class="post">
+                <div class="post-content">
+                    <h2>UK Regulatory Landscape: What Traders Need to Know</h2>
+                    <p class="date">December 6, 2024</p>
+                    <p class="excerpt">
+                        Recent regulatory changes in the UK have brought new attention to decentralized trading platforms. 
+                        Learn what these changes mean for Pump.fun users...
+                    </p>
+                    <a href="articles/uk-regulatory.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-content">
+                    <h2>Pump.fun in 2025: Platform Evolution</h2>
+                    <p class="date">December 6, 2024</p>
+                    <p class="excerpt">
+                        Exploring the future of Pump.fun and its planned developments for 2025...
+                    </p>
+                    <a href="articles/platform-evolution.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-content">
+                    <h2>Top Success Stories from Pump.fun</h2>
+                    <p class="date">December 6, 2024</p>
+                    <p class="excerpt">
+                        From Goateus Maximus to Michi, discover the most successful tokens launched through Pump.fun...
+                    </p>
+                    <a href="articles/success-stories.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-content">
+                    <h2>Understanding Market Dynamics on Pump.fun</h2>
+                    <p class="date">December 6, 2024</p>
+                    <p class="excerpt">
+                        A comprehensive guide to Pump.fun's trading mechanisms and market strategies...
+                    </p>
+                    <a href="articles/market-dynamics.html" class="read-more">Read More</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Pump.fun Blog. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const steps = document.querySelectorAll('.guide-step');
+    const overlay = document.querySelector('.guide-overlay');
+    let currentStep = 0;
+
+    // Show first step
+    steps[0].classList.add('active');
+
+    // Handle next step clicks
+    document.querySelectorAll('.next-step').forEach(button => {
+        button.addEventListener('click', () => {
+            steps[currentStep].classList.remove('active');
+            currentStep++;
+            steps[currentStep].classList.add('active');
+        });
+    });
+
+    // Handle finish
+    document.querySelector('.finish-guide').addEventListener('click', () => {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 500);
+    });
+});
+</script>
+</html> 
